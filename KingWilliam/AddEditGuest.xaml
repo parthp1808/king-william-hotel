@@ -1,0 +1,29 @@
+﻿<Window x:Class="KingWilliam.AddEditGuest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="AddEditGuest"  Height="554.517" Width="773.517">
+    <Grid>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Margin="198,413,0,0" Click="btnUpdate_Click"/>
+        <Label x:Name="lblGuestName" Content="First Name:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="76,164,0,0"/>
+        <Label x:Name="lblPhoned" Content="Phone:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Margin="60,237,0,0"/>
+        <Label x:Name="lblPostal" Content="Postal Code:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Margin="65,312,0,0"/>
+        <Label x:Name="lblAddressd" Content="Address:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Margin="65,275,0,0"/>
+        <Label x:Name="lblGuest" Content="Guest ID:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="76,126,0,0"/>
+        <Label x:Name="lblGuestName_Copy" Content="Last Name:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="76,200,0,0"/>
+        <Label x:Name="lblEmail" Content="Email:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Margin="65,348,0,0"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Click="btnExit_Click" Margin="418,413,0,0"/>
+        <Label x:Name="lblHeader" Content="Edit Guest" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Margin="198,32,0,0"/>
+        <TextBox x:Name="txtID" TextWrapping="Wrap" IsEnabled="False" Margin="372,126,83.2,366.8"/>
+        <TextBox x:Name="txtFirstName" TextWrapping="Wrap" Margin="372,164,83.2,328.8"/>
+        <TextBox x:Name="txtLastName" TextWrapping="Wrap" Margin="372,200,83.2,292.8"/>
+        <TextBox x:Name="txtPhone" TextWrapping="Wrap" Margin="372,237,83.2,255.8"/>
+        <TextBox x:Name="txtAddress" TextWrapping="Wrap" Margin="372,275,83.2,217.8"/>
+        <TextBox x:Name="txtPostal" TextWrapping="Wrap" Margin="372,312,83.2,180.8"/>
+        <TextBox x:Name="txtEmail" TextWrapping="Wrap" Margin="372,348,83.2,144.8"/>
+
+    </Grid>
+</Window>

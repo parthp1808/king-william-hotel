@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsServiceInvoice" targetNamespace="http://tempuri.org/ServiceInvoice.xsd" xmlns:mstns="http://tempuri.org/ServiceInvoice.xsd" xmlns="http://tempuri.org/ServiceInvoice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsServiceInvoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsServiceInvoice" msprop:Generator_UserDSName="dtsServiceInvoice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ServiceTable" msprop:Generator_TableClassName="ServiceTableDataTable" msprop:Generator_TableVarName="tableServiceTable" msprop:Generator_TablePropName="ServiceTable" msprop:Generator_RowDeletingName="ServiceTableRowDeleting" msprop:Generator_RowChangingName="ServiceTableRowChanging" msprop:Generator_RowEvHandlerName="ServiceTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ServiceTableRowDeleted" msprop:Generator_UserTableName="ServiceTable" msprop:Generator_RowChangedName="ServiceTableRowChanged" msprop:Generator_RowEvArgName="ServiceTableRowChangeEvent" msprop:Generator_RowClassName="ServiceTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceID" msprop:Generator_ColumnVarNameInTable="columnServiceID" msprop:Generator_ColumnPropNameInRow="ServiceID" msprop:Generator_ColumnPropNameInTable="ServiceIDColumn" msprop:Generator_UserColumnName="ServiceID" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceDescription" msprop:Generator_ColumnVarNameInTable="columnServiceDescription" msprop:Generator_ColumnPropNameInRow="ServiceDescription" msprop:Generator_ColumnPropNameInTable="ServiceDescriptionColumn" msprop:Generator_UserColumnName="ServiceDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceDate" msprop:Generator_ColumnVarNameInTable="columnServiceDate" msprop:Generator_ColumnPropNameInRow="ServiceDate" msprop:Generator_ColumnPropNameInTable="ServiceDateColumn" msprop:Generator_UserColumnName="ServiceDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

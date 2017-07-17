@@ -1,0 +1,31 @@
+﻿<Window x:Class="KingWilliam.AddEditEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="AddEditEmployee" Height="554.517" Width="773.517">
+    <Canvas Margin="0,68,23,54" x:Name="cnvEmployee" HorizontalAlignment="Right" Width="657" >
+        <Button x:Name="btnEdit" Content="Edit Information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Left="123" Canvas.Top="355" Click="btnEdit_Click"/>
+        <Label x:Name="lblGuestName" Content="First Name:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="2" Canvas.Top="75"/>
+        <Label x:Name="lblPhoned" Content="Phone:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Top="148" Canvas.Left="-14"/>
+        <Label x:Name="lblTyped" Content="Type:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Left="-10" Canvas.Top="223"/>
+        <Label x:Name="lblAddressd" Content="Address:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Left="-10" Canvas.Top="186"/>
+        <Label x:Name="lblEmployee" Content="Employee ID:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="-14" Canvas.Top="37"/>
+        <Label x:Name="lblGuestName_Copy" Content="Last Name:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="2" Canvas.Top="111"/>
+        <Label x:Name="lblPositionD" Content="Position:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Left="-10" Canvas.Top="259"/>
+        <Label x:Name="lblRateD" Content="Pay Rate:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Left="-10" Canvas.Top="296"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Left="344" Canvas.Top="355" Click="btnExit_Click"/>
+        <Label x:Name="lblHeader" Content="Add Employee" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Canvas.Left="123" Canvas.Top="-57"/>
+        <TextBox x:Name="txtID" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="37" Width="312" IsEnabled="False"/>
+        <TextBox x:Name="txtFirstName" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="75" Width="312"/>
+        <TextBox x:Name="txtLastName" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="111" Width="312"/>
+        <TextBox x:Name="txtPhone" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="148" Width="312"/>
+        <TextBox x:Name="txtAddress" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="186" Width="312"/>
+        <TextBox x:Name="txtType" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="223" Width="312"/>
+        <TextBox x:Name="txtPosition" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="259" Width="312"/>
+        <TextBox x:Name="txtRate" Height="32" Canvas.Left="298" TextWrapping="Wrap" Canvas.Top="296" Width="312"/>
+
+    </Canvas>
+</Window>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RoomDataset" targetNamespace="http://tempuri.org/RoomDataset.xsd" xmlns:mstns="http://tempuri.org/RoomDataset.xsd" xmlns="http://tempuri.org/RoomDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RoomDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RoomDataset" msprop:Generator_UserDSName="RoomDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtbRooms" msprop:Generator_TableClassName="dtbRoomsDataTable" msprop:Generator_TableVarName="tabledtbRooms" msprop:Generator_TablePropName="dtbRooms" msprop:Generator_RowDeletingName="dtbRoomsRowDeleting" msprop:Generator_RowChangingName="dtbRoomsRowChanging" msprop:Generator_RowEvHandlerName="dtbRoomsRowChangeEventHandler" msprop:Generator_RowDeletedName="dtbRoomsRowDeleted" msprop:Generator_UserTableName="dtbRooms" msprop:Generator_RowChangedName="dtbRoomsRowChanged" msprop:Generator_RowEvArgName="dtbRoomsRowChangeEvent" msprop:Generator_RowClassName="dtbRoomsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RoomID" msprop:Generator_ColumnVarNameInTable="columnRoomID" msprop:Generator_ColumnPropNameInRow="RoomID" msprop:Generator_ColumnPropNameInTable="RoomIDColumn" msprop:Generator_UserColumnName="RoomID" type="xs:string" minOccurs="0" />
+              <xs:element name="RoomFloor" msprop:Generator_ColumnVarNameInTable="columnRoomFloor" msprop:Generator_ColumnPropNameInRow="RoomFloor" msprop:Generator_ColumnPropNameInTable="RoomFloorColumn" msprop:Generator_UserColumnName="RoomFloor" type="xs:string" minOccurs="0" />
+              <xs:element name="StatusDescription" msprop:Generator_ColumnVarNameInTable="columnStatusDescription" msprop:Generator_ColumnPropNameInRow="StatusDescription" msprop:Generator_ColumnPropNameInTable="StatusDescriptionColumn" msprop:Generator_UserColumnName="StatusDescription" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

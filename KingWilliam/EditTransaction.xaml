@@ -1,0 +1,120 @@
+﻿<Window x:Class="KingWilliam.EditTransaction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="Edit Transaction" Height="904.654" Width="1545.593" ResizeMode="CanMinimize" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="RadioButton.Static.Background" Color="#FFFFFFFF"/>
+        <SolidColorBrush x:Key="RadioButton.Static.Border" Color="#FF707070"/>
+        <Style x:Key="OptionMarkFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="RadioButton.MouseOver.Background" Color="#FFF3F9FF"/>
+        <SolidColorBrush x:Key="RadioButton.MouseOver.Border" Color="#FF5593FF"/>
+        <SolidColorBrush x:Key="RadioButton.MouseOver.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="RadioButton.Disabled.Background" Color="#FFE6E6E6"/>
+        <SolidColorBrush x:Key="RadioButton.Disabled.Border" Color="#FFBCBCBC"/>
+        <SolidColorBrush x:Key="RadioButton.Disabled.Glyph" Color="#FF707070"/>
+        <SolidColorBrush x:Key="RadioButton.Pressed.Background" Color="#FFD9ECFF"/>
+        <SolidColorBrush x:Key="RadioButton.Pressed.Border" Color="#FF3C77DD"/>
+        <SolidColorBrush x:Key="RadioButton.Pressed.Glyph" Color="#FF212121"/>
+        <SolidColorBrush x:Key="RadioButton.Static.Glyph" Color="#FF212121"/>
+        <Style x:Key="RadioButtonStyle1" TargetType="{x:Type RadioButton}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource RadioButton.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RadioButton.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+
+                        <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="radioButtonBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,1,2,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid x:Name="markGrid" Margin="2">
+                                    <Ellipse x:Name="optionMark" Fill="{StaticResource RadioButton.Static.Glyph}" MinWidth="10" MinHeight="10" Opacity="0" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasContent" Value="true">
+                                <Setter Property="FocusVisualStyle" Value="{StaticResource OptionMarkFocusVisual}"/>
+                                <Setter Property="Padding" Value="4,-1,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.MouseOver.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.MouseOver.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Disabled.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Disabled.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="{StaticResource RadioButton.Pressed.Border}"/>
+                                <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource RadioButton.Pressed.Glyph}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="{x:Null}">
+                                <Setter Property="Opacity" TargetName="optionMark" Value="0.56"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border BorderThickness="0 0 0 1" BorderBrush="#FF3556C8"  HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="1534">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image x:Name="image" HorizontalAlignment="Left" Height="96" Margin="57,10,0,0" VerticalAlignment="Top" Width="86" Source="Images/logo.jpg" RenderTransformOrigin="0.437,0.013" />
+                <Label x:Name="label" Content="King William Hotel" HorizontalAlignment="Center" Margin="149,10,0,0" VerticalAlignment="Top" Height="96" Width="614" FontSize="68" FontFamily="Old English Text MT" Foreground="#FFA5A181" />
+            </StackPanel>
+        </Border>
+        <Canvas Margin="502, 420, 485.2, 334.2" Name="cnvService" Visibility="Collapsed">
+            <Label x:Name="label1" Content="Service Type:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24"/>
+            <ComboBox x:Name="cmbService" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Height="42" Canvas.Left="343" SelectionChanged="comboBox_SelectionChanged"/>
+
+        </Canvas>
+        <Canvas Margin="502,420,485.2,334.2" Name="cnvButton">
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="55" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Top="81" Click="btnUpdate_Click"/>
+            <Label x:Name="lblPrice" Content="Amount:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Canvas.Left="5"/>
+            <TextBox x:Name="txtAmount" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" FontSize="24" Canvas.Left="351"/>
+        </Canvas>
+        <Label x:Name="lblRoomID" Content="Reservation ID:" HorizontalAlignment="Left" Margin="502,168,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="txtRoomID" HorizontalAlignment="Left" Height="42" Margin="845,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="209" FontSize="24"/>
+        <RadioButton x:Name="rdbRestaurant" Content="Restaurant" HorizontalAlignment="Left" Margin="614,256,0,0" VerticalAlignment="Top" Height="24" Width="138" FontSize="18" Style="{DynamicResource RadioButtonStyle1}" Checked="rdbRestaurant_Checked"  />
+        <RadioButton x:Name="rdbService" Style="{DynamicResource RadioButtonStyle1}" Content="Room Service" HorizontalAlignment="Left" Margin="798,256,0,0" VerticalAlignment="Top" Height="24" Width="138" FontSize="18" Checked="rdbService_Checked"/>
+        <Button x:Name="btnTransactions" Content="View Transactions" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="55" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" RenderTransformOrigin="-0.16,0.853" Margin="689,334,0,0" Click="btnTransactions_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="55" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Click="btnCancel_Click" RenderTransformOrigin="-0.16,0.853" Margin="958,334,0,0"/>
+
+
+    </Grid>
+</Window>

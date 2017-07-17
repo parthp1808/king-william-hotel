@@ -1,0 +1,36 @@
+﻿<Window x:Class="KingWilliam.RoomPricing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="RoomPricing" Height="904.654" Width="1545.593" ResizeMode="CanMinimize" WindowState="Maximized">
+    <Grid>
+        <Border BorderThickness="0 0 0 1" BorderBrush="#FF3556C8"  HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="1534">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image x:Name="image" HorizontalAlignment="Left" Height="96" Margin="57,10,0,0" VerticalAlignment="Top" Width="86" Source="Images/logo.jpg" RenderTransformOrigin="0.437,0.013" />
+                <Label x:Name="label" Content="King William Hotel" HorizontalAlignment="Center" Margin="149,10,0,0" VerticalAlignment="Top" Height="96" Width="614" FontSize="68" FontFamily="Old English Text MT" Foreground="#FFA5A181" />
+            </StackPanel>
+        </Border>
+        <Label x:Name="lblPricingTitle" Content="Room Pricing" HorizontalAlignment="Left" Margin="170,119,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Room Type:" HorizontalAlignment="Left" Margin="451,327,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <ComboBox x:Name="cmbRoomType" HorizontalAlignment="Left" Margin="794,327,0,0" VerticalAlignment="Top" Width="209" Height="42" SelectionChanged="cmbRoomType_SelectionChanged"/>
+        <Canvas Margin="451,421,533.2,303.2" Name="cnvPricing">
+            <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="55" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Left="343" Canvas.Top="96" Click="btnCancel_Click"/>
+            <Button Visibility="Collapsed" x:Name="btnUpdate" Content="Change Price" HorizontalAlignment="Left" VerticalAlignment="Top" Width="211" Height="55" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Top="96" Click="btnUpdate_Click"/>
+            <Label x:Name="lblPrice" Content="Price:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="txtPrice" Height="32" Canvas.Left="343" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="202" FontSize="16"/>
+
+
+        </Canvas>
+        <Canvas Margin="451,426,536.2,407.2" Name="cnvRoomNumber" Visibility="Collapsed">
+            <Label x:Name="lblRoomNumber" Content="Room Number:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24"/>
+            <ComboBox x:Name="cmbRoomNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Height="42" Canvas.Left="343" SelectionChanged="cmbRoomNumber_SelectionChanged"/>
+
+
+        </Canvas>
+
+
+    </Grid>
+</Window>

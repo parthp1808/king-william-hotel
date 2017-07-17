@@ -1,0 +1,22 @@
+﻿<Window x:Class="KingWilliam.ChangeRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="ChangeRoom" Height="329.512" Width="648.644" WindowStyle="None">
+    <Grid>
+        <Label x:Name="lblRoomType" Content="Room Type:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="91" Margin="211,120,0,0"/>
+        <ComboBox x:Name="cmbRoomType" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" FontSize="16" Margin="355,124,0,0" SelectionChanged="cmbRoomType_SelectionChanged"/>
+        <Label x:Name="lblRoomType_Copy" Content="Room Number:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="127" Margin="195,174,0,0"/>
+        <ComboBox x:Name="cmbRoomNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" FontSize="16" Margin="355,180,0,0"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195" Height="32" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1"  Margin="101,247,0,0" Click="btnSubmit_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="195" Height="32" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1"  Margin="355,247,0,0" Click="btnCancel_Click"/>
+        <Label x:Name="lblStartDate" Content="Reservation Start Date:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="178" Margin="134,21,0,0"/>
+        <Label x:Name="lblEndDate" Content="Reservation End Date:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="192" Margin="157,69,0,0"/>
+        <DatePicker x:Name="dpiStartDate" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"  Width="132"  Focusable="False" Margin="355,21,0,0" SelectedDateChanged="dpiStartDate_SelectedDateChanged"/>
+        <DatePicker x:Name="dpiEndDate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" FontSize="16"  Height="32" Focusable="False" Margin="355,69,0,0" SelectedDateChanged="dpiEndDate_SelectedDateChanged"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="KingWilliam.ReportsMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="Generate Reports" Height="904.654" Width="1545.593" ResizeMode="CanMinimize" WindowState="Maximized">
+    <Grid>
+        <Border BorderThickness="0 0 0 1" BorderBrush="#FF3556C8"  HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="1534">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image x:Name="image" HorizontalAlignment="Left" Height="96" Margin="57,10,0,0" VerticalAlignment="Top" Width="86" Source="Images/logo.jpg" RenderTransformOrigin="0.437,0.013" />
+                <Label x:Name="label" Content="King William Hotel" HorizontalAlignment="Center" Margin="149,10,0,0" VerticalAlignment="Top" Height="96" Width="614" FontSize="68" FontFamily="Old English Text MT" Foreground="#FFA5A181" />
+            </StackPanel>
+        </Border>
+        <Button x:Name="button_Reservations" HorizontalAlignment="Left" Margin="268,369,0,0" VerticalAlignment="Top" Width="246" Height="67" Background="#FF9A6836" Click="button_Reservations_Click">
+            <StackPanel Width="142" Orientation="Horizontal" Height="64">
+                <Image Source="Images/report.png" Width="37" Margin="0,10"/>
+                <Label Content=" Reservations" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" FontSize="16" Margin="0,16,0,10" Width="112" Height="38"/>
+
+            </StackPanel>
+
+        </Button>
+        <Button x:Name="btnRooms" HorizontalAlignment="Left" Margin="268,253,0,0" VerticalAlignment="Top" Width="246" Height="67" Background="#FF9A6836" Click="button_RoomAvailability_Click">
+
+            <StackPanel Width="174" Orientation="Horizontal" Height="64">
+                <Image Source="Images/report.png" Width="45" Margin="0,16,0,10"/>
+                <Label Content="Room Availability" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" FontSize="16" Margin="0,16,0,10" Width="139" Height="38"/>
+
+            </StackPanel>
+
+        </Button>
+        <Button x:Name="btnInvoice" HorizontalAlignment="Left" Margin="268,488,0,0" VerticalAlignment="Top" Width="246" Height="67" Background="#FF9A6836" Click="btnInvoice_Click">
+            <StackPanel Width="142" Orientation="Horizontal" Height="64">
+                <Image Source="Images/report.png" Width="37" Margin="0,10"/>
+                <Label Content="    Invoice" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" FontSize="16" Margin="0,16,0,10" Width="112" Height="38"/>
+
+            </StackPanel>
+
+        </Button>
+        <Label x:Name="lblTitle" Content="Generate Reports" HorizontalAlignment="Left" Margin="170,119,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Canvas Margin="750,273,470.2,455.2" Name="cnvInvoice" Visibility="Collapsed">
+            <Label x:Name="lblReservationID" Content="Reservation ID" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox x:Name="txtFind" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" Canvas.Left="199"/>
+            <Button x:Name="btnGenerateInvoice" Content="Generate Invoice" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" Height="34" Background="#FF9A6836" FontSize="16" Foreground="#FFF1F1F1" Canvas.Left="95" Canvas.Top="113" Click="btnGenerateInvoice_Click"/>
+
+        </Canvas>
+        <Canvas Margin="787,274,371.2,416.2" Name="cnvRooms" Visibility="Collapsed">
+            <Label x:Name="lblStartDate" Content="Start Date:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="178"/>
+            <Label x:Name="lblEndDate" Content="End Date:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="178" Canvas.Top="72"/>
+            <DatePicker x:Name="dpiStartDate" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"  Width="132" Focusable="False" Canvas.Left="249" Canvas.Top="1" SelectedDateChanged="dpiStartDate_SelectedDateChanged"/>
+            <DatePicker x:Name="dpiEndDate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" FontSize="16"  Height="32" SelectedDateChanged="dpiEndDate_SelectedDateChanged" Focusable="False" Canvas.Left="249" Canvas.Top="74"/>
+            <Button x:Name="btnGenerateRooms" Content="Generate Room Availibility Report" HorizontalAlignment="Left" VerticalAlignment="Top" Width="261" Height="34" Background="#FF9A6836" FontSize="16" Foreground="#FFF1F1F1" Canvas.Left="88" Canvas.Top="151" Click="btnGenerateRooms_Click"/>
+
+
+        </Canvas>
+
+
+    </Grid>
+</Window>

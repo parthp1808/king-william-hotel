@@ -1,0 +1,54 @@
+﻿<Window x:Class="KingWilliam.ExistingReservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KingWilliam"
+        mc:Ignorable="d"
+        Title="ExistingReservation" Height="904.654" Width="1545.593" ResizeMode="CanMinimize" WindowState="Maximized">
+    <Grid>
+        <Border BorderThickness="0 0 0 1" BorderBrush="#FF3556C8"  HorizontalAlignment="Left" Height="119" VerticalAlignment="Top" Width="1534">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image x:Name="image" HorizontalAlignment="Left" Height="96" Margin="57,10,0,0" VerticalAlignment="Top" Width="86" Source="Images/logo.jpg" RenderTransformOrigin="0.437,0.013" />
+                <Label x:Name="label" Content="King William Hotel" HorizontalAlignment="Center" Margin="149,10,0,0" VerticalAlignment="Top" Height="96" Width="614" FontSize="68" FontFamily="Old English Text MT" Foreground="#FFA5A181" />
+            </StackPanel>
+        </Border>
+        <Label x:Name="lblExistingReservationTitle" Content="Existing Reservation" HorizontalAlignment="Left" Margin="170,119,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Reservation ID" HorizontalAlignment="Left" Margin="641,215,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtFind" HorizontalAlignment="Left" Height="32" Margin="840,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Button x:Name="btnFind" Content="Find" HorizontalAlignment="Left" Margin="654,265,0,0" VerticalAlignment="Top" Width="99" Background="#FF9A6836" FontSize="16" Foreground="#FFF1F1F1" Height="34" Click="btnFind_Click"/>
+        <Canvas Margin="290,315,292.2,77.2" Visibility="Collapsed" Name="cnvResult">
+            <Label x:Name="lblGuestFirstName" Content="First Name:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="13" Canvas.Top="59"/>
+            <Label x:Name="lblPhone" Content="Phone:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Top="137"/>
+            <Label x:Name="lblEmail" Content="Email:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Left="504" Canvas.Top="137"/>
+            <Label x:Name="lblAddress" Content="Address:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Top="98"/>
+            <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Canvas.Left="152" Canvas.Top="59" FontSize="16"/>
+            <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Canvas.Left="152" Canvas.Top="143" FontSize="16"/>
+            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Canvas.Left="152" Canvas.Top="101" FontSize="16"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Canvas.Left="674" Canvas.Top="143" FontSize="16"/>
+            <Label x:Name="lblGuestLastName" Content="Last Name:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="513" Canvas.Top="53"/>
+            <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Canvas.Left="674" Canvas.Top="59" FontSize="16"/>
+            <Label x:Name="lblPostalCode" Content="Postal Code:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="101" Canvas.Left="504" Canvas.Top="98"/>
+            <TextBox x:Name="txtPostalCode" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Canvas.Left="674" Canvas.Top="101" FontSize="16"/>
+            <Label x:Name="lblEmployeeID" Content="Employee ID:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="530" Canvas.Top="10"/>
+            <TextBox x:Name="txtEmployeeID" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" Text="E00001" VerticalAlignment="Top" Width="283" FontSize="16" LostFocus="txtGuestID_LostFocus" IsEnabled="False" Canvas.Left="674" Canvas.Top="13"/>
+            <Border Height="168" Canvas.Left="195" Canvas.Top="211" Width="585" BorderBrush="Black" BorderThickness="2">
+                <Grid>
+                    <Label x:Name="lblStartDateDisplay" Content="Reservation Start Date:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="178" Margin="0,10,0,0"/>
+                    <Label x:Name="lblEndDateDisplay" Content="Reservation End Date:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="181" Margin="0,57,0,0"/>
+                    <Label x:Name="lblRoomNumber" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="174" Foreground="Black" Margin="197,108,0,0" BorderBrush="Black" BorderThickness="1" Height="36"/>
+                    <Label x:Name="lblRoomNumberDisplay" Content="Room Number:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="129" Margin="22,108,0,0"/>
+                    <Label x:Name="lblStartDate" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="174" Foreground="Black" Margin="197,10,0,0" BorderBrush="Black" BorderThickness="1" Height="36"/>
+                    <Label x:Name="lblEndDate" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Width="174" Foreground="Black" Margin="197,57,0,0" BorderBrush="Black" BorderThickness="1" Height="36"/>
+                    <Button x:Name="btnEdit" Content="Edit Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Margin="396,58,0,0" Click="btnEdit_Click"/>
+                </Grid>
+            </Border>
+            <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Left="269" Canvas.Top="435" Click="btnUpdate_Click"/>
+            <Button x:Name="btnDelete" Content="Delete Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="218" Height="48" Background="#FF9A6836" FontSize="18" Foreground="#FFF1F1F1" Canvas.Left="495" Canvas.Top="435" Click="btnDelete_Click"/>
+            <Label x:Name="lblGuestID" Content="Guest ID:"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Canvas.Left="10" Canvas.Top="9"/>
+            <TextBox x:Name="txtGuestID" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" FontSize="16" Canvas.Left="152" Canvas.Top="10" IsEnabled="False"/>
+        </Canvas>
+        <Button x:Name="btnCancel" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="34" Background="#FF9A6836" FontSize="16" Foreground="#FFF1F1F1" Click="btnCancel_Click" Margin="840,265,0,0"/>
+
+    </Grid>
+</Window>
